@@ -104,3 +104,10 @@ venv.bak/
 .mypy_cache/
 /crunchydemodata.iml
 /.idea/
+/county_boundaries/shapefile/tl_2018_us_county.dbf
+/county_boundaries/shapefile/tl_2018_us_county.prj
+/county_boundaries/shapefile/tl_2018_us_county.shx
+/county_boundaries/shapefile/tl_2018_us_county.shp.ea.iso.xml
+/county_boundaries/shapefile/tl_2018_us_county.cpg
+/county_boundaries/shapefile/tl_2018_us_county.shp.iso.xml
+/county_boundaries/shapefile/tl_2018_us_county.shp
