@@ -111,3 +111,4 @@ venv.bak/
 /county_boundaries/shapefile/tl_2018_us_county.cpg
 /county_boundaries/shapefile/tl_2018_us_county.shp.iso.xml
 /county_boundaries/shapefile/tl_2018_us_county.shp
+/county_boundaries/output/county_boundaries_copy.txt
