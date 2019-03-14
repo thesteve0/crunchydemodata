@@ -19,5 +19,7 @@ CREATE TABLE county_geometry
   awater BIGINT, --area of water in m2
   interior_pnt geometry(POINT, 4326), --generated from geom in the file
   the_geom geometry(POLYGON,4326) --generated from geom in the file
-
 );
+create index countygeom_interiorpt_indx on county_geometry using gist (interior_pnt);
+create index countygeom_the_geom_indx on county_geometry using gist (the_geom);
+create index countygeom_geoid_indx on county_geometry (geoid);
