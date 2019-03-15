@@ -112,3 +112,5 @@ venv.bak/
 /county_boundaries/shapefile/tl_2018_us_county.shp.iso.xml
 /county_boundaries/shapefile/tl_2018_us_county.shp
 /county_boundaries/output/county_boundaries_copy.txt
+county_boundaries/.vscode/settings.json
+/county_boundaries/.vscode/

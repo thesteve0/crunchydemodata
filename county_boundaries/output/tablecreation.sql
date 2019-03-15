@@ -18,8 +18,11 @@ CREATE TABLE county_geometry
   aland BIGINT,  --area of land in m2
   awater BIGINT, --area of water in m2
   interior_pnt geometry(POINT, 4326), --generated from geom in the file
-  the_geom geometry(POLYGON,4326) --generated from geom in the file
+  the_geom geometry(MULTIPOLYGON,4326) --generated from geom in the file
 );
 create index countygeom_interiorpt_indx on county_geometry using gist (interior_pnt);
 create index countygeom_the_geom_indx on county_geometry using gist (the_geom);
 create index countygeom_geoid_indx on county_geometry (geoid);
+
+-- then use the copy command like so
+-- \COPY county_geometry (statefp, countyfp, countyns, geoid, county_name, namelsad, funcstat, aland, awater, interior_pnt, the_geom) from '~/git/crunchydemodata/county_boundaries/output/county_boundaries_copy.txt' WITH CSV QUOTE '"';
