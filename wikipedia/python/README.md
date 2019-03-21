@@ -5,7 +5,7 @@ https://en.wikipedia.org/wiki/List_of_United_States_counties_and_county_equivale
 and used the firefox plugin "table to excel" to capture all the county names in the US by state.
 
 This is saved in this directory as:
-3243_x_4_wikitable_sortable_jquery-tablesorter.csv
+county_state_names.csv
 
 In the script we can use the name plus state to autogenerate the page name for the wikipedia page for the county.
 
@@ -16,4 +16,4 @@ It might be better to use Beautiful Soup to pull down the HTML page, parse the t
 susceptible to format changes on the page. 
 
 
-https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&format=xml&formatversion=2&titles=Autauga_County,_Alabama
+https://stackoverflow.com/questions/9765770/loading-large-amount-of-data-into-postgres-hstore
