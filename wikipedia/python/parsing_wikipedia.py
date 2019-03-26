@@ -65,7 +65,12 @@ def sql_string(county_dict):
     sql_statement = ''
     try:
         # using ^ as a delimeter because there are both " and ' used in the body of the text.
-        json_string = json.dumps(county_dict['json_content'])
+        # ESCAPE
+        # Specifies the character that should appear before a data character that matches the QUOTE value. The default
+        # is the same as the QUOTE value (so that the quoting character is doubled if it appears in the data). This must
+        # be a single one-byte character. This option is allowed only when using CSV format.
+
+        json_string = json.dumps(county_dict['json_content']).replace('^', '^^')
 
         sql_statement = sql_statement + '^' + county_dict['full_name_list'][0] + '^,^' + county_dict['full_name_list'][1] + '^,'
         sql_statement = sql_statement + '^' + json_string + '^,^'
@@ -119,9 +124,6 @@ if __name__ == '__main__':
         if ((i % 100) == 0):
             print("Just finished: " + str(i))
         i = i + 1
-        if i > 100:
-            break
-
 
     print("Finished with the requests now making the CSV file")
     i = 0

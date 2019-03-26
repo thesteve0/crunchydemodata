@@ -21,3 +21,6 @@ create index wikipedia_json_content_indx on wikipedia using gin (json_content);
 -- https://www.postgresql.org/docs/11/indexes-multicolumn.html
 -- Our queries will usually set the state and then look the county
 create index wikipedia_county_state_indx on wikipedia (state, county);
+
+--then load data with
+-- \copy wikipedia (county, state, json_content, response_attr) from './wikipedia_copy.txt' WITH CSV QUOTE '^'
